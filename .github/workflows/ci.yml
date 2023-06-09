@@ -1,0 +1,28 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+jobs:
+  determine-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0
+        with:
+          versionSpec: "5.x"
+
+      - name: Determine Version
+        uses: gittools/actions/gitversion/execute@v0
+        with:
+          useConfigFile: true
+          configFilePath: GitVersion.yml
+
+      - name: Log for Debug
+        run: echo $GITVERSION_SEMVER

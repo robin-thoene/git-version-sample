@@ -1,0 +1,10 @@
+{
+  "name": "git-version-sample",
+  "version": "1.0.0",
+  "description": " Sample npm package to try out GitVersion. ",
+  "main": "index.js",
+  "repository": "https://github.com/robin-thoene/git-version-sample.git",
+  "author": "Robin Thöne <110201991+robin-thoene@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true
+}
