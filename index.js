@@ -1,5 +1,5 @@
 function hello(name) {
-  // Return a greeting followed by the name of the person provided.
+  // Minor version increment.
   return `Hello ${name}`;
 }
 
