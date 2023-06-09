@@ -1,5 +1,5 @@
 function hello(name) {
-  // Minor version increment.
+  // Breaking change.
   return `Hello ${name}`;
 }
 
